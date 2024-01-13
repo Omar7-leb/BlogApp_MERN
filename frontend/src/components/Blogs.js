@@ -15,13 +15,11 @@ const Blogs = ({title,description,imageURL,userName}) => {
         }
        
         title={title}
-        subheader="September 14, 2016"
       />
       <CardMedia
         component="img"
         height="194"
         image={imageURL}
-        alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
