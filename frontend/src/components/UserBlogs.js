@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import Blogs from './Blogs';
 const UserBlogs = () => {
   const [blogs, setBlogs] = useState();
   const id = localStorage.getItem("userId");
@@ -13,7 +14,9 @@ const UserBlogs = () => {
   },[])
   console.log(blogs);
   return (
-    <div>UserBlogs</div>
+    <div>{blogs && blogs.map((blog, index) => (
+      <Blogs title={blog.title} description={blog.description} imageURL={blog.imageURL} userName={blog.userName}/>
+    ))}</div>
   )
 }
 
